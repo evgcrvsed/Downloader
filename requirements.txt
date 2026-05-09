@@ -1,4 +1,5 @@
 httpx
+tqdm
 beautifulsoup4
 pydantic
 pydantic_settings

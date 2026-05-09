@@ -1,7 +1,10 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
-
+from pydantic_settings import BaseSettings
+from pathlib import Path
 
 class Settings(BaseSettings):
+    DOWNLOAD_DIR: Path = Path(__file__).parent / "Autodownloader"
+    DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+
     SESSION_HEADERS: dict = {
         "Accept": "application/vnd.github+json"
     }
